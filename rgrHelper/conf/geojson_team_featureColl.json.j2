@@ -1,0 +1,26 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {{ features }}
+    ],
+    "properties": {
+        "type": "round",
+        "time": "{{ start_time }}",
+        "uuid": "{{ feature_uuid }}",
+        "roundID": "{{ round_identifier }}",
+        "w3wAddress": {
+            "country": "{{ hq_country }}",
+            "ßnearestPlace": "{{ hq_nrstPlace }}",
+            "words": "{{ hq_w3w }}",
+            "word1": "{{ hq_w1 }}",
+            "word2": "{{ hq_w2 }}",
+            "word3": "{{ hq_w3 }}",
+            "language": "{{ hq_lng }}",
+            "map": "{{ hq_map }}"
+        },
+        "team": {
+            "name": "{{ team_name }}",
+            "id": "{{ team_ID}}"
+        }   
+    }
+}

@@ -1,0 +1,29 @@
+{
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            {{ polygon_coords }}
+          ]
+        },
+    "properties": {
+        "type": "territory",
+        "uuid": "{{ feature_uuid }}",
+        "roundID": "{{ round_identifier }}",
+        "area": "{{ polygon_area }}",
+        "w3wAddress": {
+            "country": "{{ hq_country }}",
+            "nearestPlace": "{{ hq_nrstPlace }}",
+            "words": "{{ hq_w3w }}",
+            "word1": "{{ hq_w1 }}",
+            "word2": "{{ hq_w2 }}",
+            "word3": "{{ hq_w3 }}",
+            "language": "{{ hq_lng }}",
+            "map": "{{ hq_map }}"
+        },
+        "team": {
+            "name": "{{ team_name }}",
+            "id": "{{ team_ID}}"
+        }
+    }
+}
