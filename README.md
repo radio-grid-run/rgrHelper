@@ -252,9 +252,9 @@ This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 Intern
 [License Details](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ### Original Work
-Link to the original work: [https://radiogrid.run](https://radiogrid.run)
+GitHub source code repository: [github.com/radio-grid-run/rgrHelper](https://github.com/radio-grid-run/rgrHelper)
 
-GitHub source code repository: [github.com/radio-grid-run/radio-grid-run-DOC](https://github.com/radio-grid-run/radio-grid-run-DOC)
+For more information about Radio Grid Run itself, see: [https://radiogrid.run](https://radiogrid.run)
 
 
 ### Date of Creation:
