@@ -415,3 +415,5 @@ var/
 # sample folder tree
 sample_target_tree/*
 .env
+samples
+documentation
