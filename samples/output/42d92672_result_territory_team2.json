@@ -1,0 +1,117 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [7.074309, 46.956487]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "01-Oct-2023 10:02",
+        "uuid": "b07f99be-9b0d-46b3-a237-fe92b440d812",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Bas-Vully, Fribourg",
+            "words": "chien.soierie.décence",
+            "word1": "chien",
+            "word2": "soierie",
+            "word3": "décence",
+            "language": "fr",
+            "map": "https://w3w.co/chien.soierie.d%C3%A9cence"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [7.07889, 46.95487]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "01-Oct-2023 10:18",
+        "uuid": "e047f333-da00-4c97-b1f1-c411b4f47edd",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Bas-Vully, Fribourg",
+            "words": "suggérons.parafiscal.élagage",
+            "word1": "suggérons",
+            "word2": "parafiscal",
+            "word3": "élagage",
+            "language": "fr",
+            "map": "https://w3w.co/sugg%C3%A9rons.parafiscal.%C3%A9lagage"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [7.084974, 46.961311]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "01-Oct-2023 10:34",
+        "uuid": "1a319d28-93ed-4c5b-9a20-3b5ab0ad32e2",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Bas-Vully, Fribourg",
+            "words": "écrémer.tramer.romantique",
+            "word1": "écrémer",
+            "word2": "tramer",
+            "word3": "romantique",
+            "language": "fr",
+            "map": "https://w3w.co/%C3%A9cr%C3%A9mer.tramer.romantique"
+        }
+    }
+},{
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [ [7.074309, 46.956487], [7.07889, 46.95487], [7.084974, 46.961311], [7.074309, 46.956487]]
+          ]
+        },
+    "properties": {
+        "type": "territory",
+        "uuid": "c187a562-6266-4914-959a-f0783747d172",
+        "roundID": "42d92672",
+        "area": "166387.27612181247",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Bas-Vully, Fribourg",
+            "words": "campeuse.canaliser.sinon",
+            "word1": "campeuse",
+            "word2": "canaliser",
+            "word3": "sinon",
+            "language": "fr",
+            "map": "https://w3w.co/campeuse.canaliser.sinon"
+        },
+        "team": {
+            "name": "Equipe rouge",
+            "id": "Equ_red"
+        }
+    }
+}
+    ],
+    "properties": {
+        "type": "round",
+        "time": "01-10-2023T10:00:00",
+        "uuid": "da437b42-6f3c-489f-b8f7-ebae850abf0a",
+        "roundID": "42d92672",
+        "w3wAddress": {
+            "country": "CH",
+            "ßnearestPlace": "Bas-Vully, Fribourg",
+            "words": "campeuse.canaliser.sinon",
+            "word1": "campeuse",
+            "word2": "canaliser",
+            "word3": "sinon",
+            "language": "fr",
+            "map": "https://w3w.co/campeuse.canaliser.sinon"
+        },
+        "team": {
+            "name": "Equipe rouge",
+            "id": "Equ_red"
+        }   
+    }
+}
