@@ -1,0 +1,117 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [7.019214, 46.932204]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "01-Oct-2023 14:48",
+        "uuid": "31e0c5c8-0590-41d2-9ce8-b0b8d9162ee8",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Avenches, Vaud",
+            "words": "usité.tatouage.lampadaire",
+            "word1": "usité",
+            "word2": "tatouage",
+            "word3": "lampadaire",
+            "language": "fr",
+            "map": "https://w3w.co/usit%C3%A9.tatouage.lampadaire"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [7.019293, 46.928727]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "01-Oct-2023 14:58",
+        "uuid": "18ba31ba-b271-4cd8-8aa3-9134094d5dc6",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Avenches, Vaud",
+            "words": "navette.complètement.sportif",
+            "word1": "navette",
+            "word2": "complètement",
+            "word3": "sportif",
+            "language": "fr",
+            "map": "https://w3w.co/navette.compl%C3%A8tement.sportif"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [7.02186, 46.928458]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "01-Oct-2023 15:03",
+        "uuid": "b3d4ecae-abc9-4ac3-9782-03b899d8c2c8",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Avenches, Vaud",
+            "words": "danois.fruitière.aimer",
+            "word1": "danois",
+            "word2": "fruitière",
+            "word3": "aimer",
+            "language": "fr",
+            "map": "https://w3w.co/danois.fruiti%C3%A8re.aimer"
+        }
+    }
+},{
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [ [7.019214, 46.932204], [7.019293, 46.928727], [7.02186, 46.928458], [7.019214, 46.932204]]
+          ]
+        },
+    "properties": {
+        "type": "territory",
+        "uuid": "ded9e2dd-9c17-4e0f-ac86-ac20cd8b9384",
+        "roundID": "6da722d2",
+        "area": "37675.197285818096",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Avenches, Vaud",
+            "words": "épuisement.chenaux.tuyau",
+            "word1": "epuisement",
+            "word2": "chenaux",
+            "word3": "tuyau",
+            "language": "fr",
+            "map": "https://w3w.co/%C3%A9puisement.chenaux.tuyau"
+        },
+        "team": {
+            "name": "EquipeColeBertie",
+            "id": "MaCOl"
+        }
+    }
+}
+    ],
+    "properties": {
+        "type": "round",
+        "time": "01-10-14:45:00",
+        "uuid": "356287de-449d-4483-9617-27bc53b1d3ba",
+        "roundID": "6da722d2",
+        "w3wAddress": {
+            "country": "CH",
+            "ßnearestPlace": "Avenches, Vaud",
+            "words": "épuisement.chenaux.tuyau",
+            "word1": "epuisement",
+            "word2": "chenaux",
+            "word3": "tuyau",
+            "language": "fr",
+            "map": "https://w3w.co/%C3%A9puisement.chenaux.tuyau"
+        },
+        "team": {
+            "name": "EquipeColeBertie",
+            "id": "MaCOl"
+        }   
+    }
+}
