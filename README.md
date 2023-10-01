@@ -30,6 +30,15 @@ add a `.env` file with the following key-pair value in `rgrHelper` folder.
 
 ## 3. Usage
 
+### Process
+
+1. Use `rgrHelper hqpoint` to define parameters of the base in order to update gameConfig.ini accordingly
+2. Update base (hq) and team settings by editing `rgrHelper/conf/gameConfig.ini`
+3. Use `rgrHelper computeterritory [OPTIONS] INPUT TEAM` to create result geoJSON Feature collections of the teams
+4. Open all result geoJSON files in Google Earth Pro do display the results and compare the territories of all teams
+
+### Commands
+
 _Command `rgrHelper`_
 ```
 Usage: rgrHelper [OPTIONS] COMMAND [ARGS]...
@@ -44,6 +53,18 @@ hqpoint           Generate a geoJSON Point Feature .json output file...
 testarea          Test for area function
 testw3w           Sending a API call to w3w to check connection.
 ```
+
+_Command `rgrHelper hqpoint [OPTIONS]`_
+
+```
+Usage: rgrHelper hqpoint [OPTIONS]
+
+  Generate a geoJSON Point Feature .json output file for the Round
+  Headquarter.
+Options:
+  --help  Show this message and exit.
+```
+
 _Command `rgrHelper computeterritory [OPTIONS] INPUT TEAM`_
 ```
 Usage: rgrHelper computeterritory [OPTIONS] INPUT TEAM
@@ -68,28 +89,26 @@ Options:
 - `word1`: 1st word of the what3words address
 - `word2`: 2nd word of the what3words address
 - `word3`: 3rd word of the what3words address
-- `Notes`: optional comment that can be empty
-- `Added Time`: timestamp of the contact entry in the file
+- `Notes`: (optional) comment that can be empty
+- `Added Time`: (optional) timestamp of moment when the contact was entered
 
 
-_Command `rgrHelper hqpoint [OPTIONS]`_
-
-```
-Usage: rgrHelper hqpoint [OPTIONS]
-
-  Generate a geoJSON Point Feature .json output file for the Round
-  Headquarter.
-Options:
-  --help  Show this message and exit.
-```
 
 ## 4. Examples
 
 ### Input .CSV file
 
 ```
-contact_time,team_id,word1,word2,word3,Notes,Added Time,Referrer Name,Task Owner
-14-Sep-2023 17:48,1,carotte,decuplons,ecartant,,14-Sep-2023 17:04:11,https://forms.zoho.eu/radiogridrun/form/contacts/thankyou,info@radiogrid.run
+contact_time,team_id,word1,word2,word3,Notes,Added Time
+01-Oct-2023 11:05,1,enclume,mesurage,rouage,rendez-vous bonus,01-Oct-2023 10:05:52
+01-Oct-2023 10:44,1,glousser,viseur,hoteliere,,01-Oct-2023 10:44:17
+01-Oct-2023 10:34,2,ecremer,tramer,romantique,,01-Oct-2023 10:34:37
+01-Oct-2023 10:33,1,saliver,informatrice,campe,,01-Oct-2023 10:33:13
+01-Oct-2023 10:18,2,suggerons,parafiscal,elagage,,01-Oct-2023 10:18:42
+01-Oct-2023 10:16,1,detectons,averti,immediat,,01-Oct-2023 10:16:20
+01-Oct-2023 10:02,2,chien,soierie,decence,,01-Oct-2023 10:02:56
+01-Oct-2023 10:01,1,piocheur,affermir,abimer,,01-Oct-2023 10:02:10
+
 ```
 
 ### Output geoJSON Point Feature (ex. hqpoint)
