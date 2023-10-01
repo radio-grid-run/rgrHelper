@@ -32,10 +32,9 @@ add a `.env` file with the following key-pair value in `rgrHelper` folder.
 
 ### Process
 
-1. Use `rgrHelper hqpoint` to define parameters of the base in order to update gameConfig.ini accordingly
-2. Update base (hq) and team settings by editing `rgrHelper/conf/gameConfig.ini`
-3. Use `rgrHelper computeterritory [OPTIONS] INPUT TEAM` to create result geoJSON Feature collections of the teams
-4. Open all result geoJSON files in Google Earth Pro do display the results and compare the territories of all teams
+1. Update base (hq) and team settings by editing `rgrHelper/conf/gameConfig.ini`
+2. Use `rgrHelper computeterritory [OPTIONS] INPUT TEAM` to create result geoJSON Feature collections of the teams
+3. Open all result geoJSON files in Google Earth Pro do display the results and compare the territories of all teams
 
 ### Commands
 
