@@ -1,0 +1,117 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [7.013882, 46.925844]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "21-Oct-2023 10:17",
+        "uuid": "11195177-3940-4f6c-bc16-d84c567acd21",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Avenches, Vaud",
+            "words": "ludique.géologue.infime",
+            "word1": "ludique",
+            "word2": "géologue",
+            "word3": "infime",
+            "language": "fr",
+            "map": "https://w3w.co/ludique.g%C3%A9ologue.infime"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [7.019135, 46.936974]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "21-Oct-2023 10:39",
+        "uuid": "b81cf22c-3135-4430-867a-36144a080eef",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Avenches, Vaud",
+            "words": "notaire.commercer.rythmant",
+            "word1": "notaire",
+            "word2": "commercer",
+            "word3": "rythmant",
+            "language": "fr",
+            "map": "https://w3w.co/notaire.commercer.rythmant"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [7.03043, 46.934899]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "21-Oct-2023 10:54",
+        "uuid": "b2122899-91d6-48ee-8749-94aa142c6e0a",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Avenches, Vaud",
+            "words": "espèce.ioniser.réjouisse",
+            "word1": "espèce",
+            "word2": "ioniser",
+            "word3": "réjouisse",
+            "language": "fr",
+            "map": "https://w3w.co/esp%C3%A8ce.ioniser.r%C3%A9jouisse"
+        }
+    }
+},{
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [ [7.013882, 46.925844], [7.019135, 46.936974], [7.03043, 46.934899], [7.013882, 46.925844]]
+          ]
+        },
+    "properties": {
+        "type": "territory",
+        "uuid": "9a6df900-7c44-4ffb-b7ef-16351e993536",
+        "roundID": "a90be7c0",
+        "area": "578019.8541351687",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Avenches, Vaud",
+            "words": "épuisement.chenaux.tuyau",
+            "word1": "epuisement",
+            "word2": "chenaux",
+            "word3": "tuyau",
+            "language": "fr",
+            "map": "https://w3w.co/%C3%A9puisement.chenaux.tuyau"
+        },
+        "team": {
+            "name": "EquipeRouge",
+            "id": "rouge"
+        }
+    }
+}
+    ],
+    "properties": {
+        "type": "round",
+        "time": "21-10-10:00:00",
+        "uuid": "39718bdb-3854-4b68-8f20-494d71cf7525",
+        "roundID": "a90be7c0",
+        "w3wAddress": {
+            "country": "CH",
+            "ßnearestPlace": "Avenches, Vaud",
+            "words": "épuisement.chenaux.tuyau",
+            "word1": "epuisement",
+            "word2": "chenaux",
+            "word3": "tuyau",
+            "language": "fr",
+            "map": "https://w3w.co/%C3%A9puisement.chenaux.tuyau"
+        },
+        "team": {
+            "name": "EquipeRouge",
+            "id": "rouge"
+        }   
+    }
+}

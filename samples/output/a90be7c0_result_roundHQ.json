@@ -1,0 +1,18 @@
+{"type": "Feature","geometry":{"coordinates": [7.022413, 46.93118], "type": "Point"},
+    "properties": {
+        "type": "round headquarter",
+        "time": "21-10-10:00:00",
+        "uuid": "38ac2b10-4c7c-4172-a14a-6bf3864e2608",
+        "roundID": "a90be7c0",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Avenches, Vaud",
+            "words": "épuisement.chenaux.tuyau",
+            "word1": "epuisement",
+            "word2": "chenaux",
+            "word3": "tuyau",
+            "language": "fr",
+            "map": "https://w3w.co/%C3%A9puisement.chenaux.tuyau"
+        }
+    }
+}

@@ -1,0 +1,117 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [7.032445, 46.935896]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "21-Oct-2023 10:19",
+        "uuid": "81057ea0-ef3e-4897-ad22-c9aa383326a7",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Avenches, Vaud",
+            "words": "doubleur.aperçu.causeur",
+            "word1": "doubleur",
+            "word2": "aperçu",
+            "word3": "causeur",
+            "language": "fr",
+            "map": "https://w3w.co/doubleur.aper%C3%A7u.causeur"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [7.022927, 46.937972]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "21-Oct-2023 10:37",
+        "uuid": "9cabed32-2261-41e0-987b-be25b94c85db",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Avenches, Vaud",
+            "words": "archiver.tremblement.rediscuter",
+            "word1": "archiver",
+            "word2": "tremblement",
+            "word3": "rediscuter",
+            "language": "fr",
+            "map": "https://w3w.co/archiver.tremblement.rediscuter"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [7.015304, 46.932177]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "21-Oct-2023 10:55",
+        "uuid": "accd54c7-b673-42d8-a887-3117a1f057ba",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Avenches, Vaud",
+            "words": "exagérant.argoter.édulcorer",
+            "word1": "exagérant",
+            "word2": "argoter",
+            "word3": "édulcorer",
+            "language": "fr",
+            "map": "https://w3w.co/exag%C3%A9rant.argoter.%C3%A9dulcorer"
+        }
+    }
+},{
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [ [7.032445, 46.935896], [7.022927, 46.937972], [7.015304, 46.932177], [7.032445, 46.935896]]
+          ]
+        },
+    "properties": {
+        "type": "territory",
+        "uuid": "c8e9a0b0-10d3-4b29-a474-4c4c22823bdd",
+        "roundID": "a90be7c0",
+        "area": "300309.268038901",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Avenches, Vaud",
+            "words": "épuisement.chenaux.tuyau",
+            "word1": "epuisement",
+            "word2": "chenaux",
+            "word3": "tuyau",
+            "language": "fr",
+            "map": "https://w3w.co/%C3%A9puisement.chenaux.tuyau"
+        },
+        "team": {
+            "name": "EquipeBleu",
+            "id": "bleu"
+        }
+    }
+}
+    ],
+    "properties": {
+        "type": "round",
+        "time": "21-10-10:00:00",
+        "uuid": "e7344f6c-0a65-4281-a6d6-d51314c2fa52",
+        "roundID": "a90be7c0",
+        "w3wAddress": {
+            "country": "CH",
+            "ßnearestPlace": "Avenches, Vaud",
+            "words": "épuisement.chenaux.tuyau",
+            "word1": "epuisement",
+            "word2": "chenaux",
+            "word3": "tuyau",
+            "language": "fr",
+            "map": "https://w3w.co/%C3%A9puisement.chenaux.tuyau"
+        },
+        "team": {
+            "name": "EquipeBleu",
+            "id": "bleu"
+        }   
+    }
+}
