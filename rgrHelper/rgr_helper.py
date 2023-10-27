@@ -131,6 +131,12 @@ def computeterritory(config, savesortedinput, input, team):
     # Count of contact for the team selected in argument TEAM
     contact_count = 0
 
+    # number of decimal place to round the resulting area surface
+    # = nombre de chiffres significatifs
+    # normally the area are in the 1-2 square kilometer range
+    # it seems coherent to go down to 1 square meter. Which is the 8th decimal.
+    decPlaces = 0
+
     ## Opening input csv input file
     with open(input, newline='', encoding='utf-8-sig') as inputFile:
         ## Reading input data
@@ -235,17 +241,20 @@ def computeterritory(config, savesortedinput, input, team):
         
         # Convert Coordinates to Polygon to get area
         teamPoly = geojson.Polygon([poly_coord])
-        # computing Polygon aera
-        myArea = area(teamPoly)
+        # computing Polygon aera in sqare kilometers
+        myArea = round(area(teamPoly))
+        myArea_separated = f"{myArea:,}"
+        myArea_rounded_approx =round(myArea,-2)
         # DEBUG
         if config.verbose:
-            print(myArea)
+            print(myArea_rounded)
         
         poly_string = featurePolygon_template.render(
             polygon_coords=poly_coord_string.replace('(','').replace(')',''),  # array of Points coords
             feature_uuid=uuid.uuid4(),  # random generated UUID
             round_identifier=config.roundhash.hexdigest(),   # round hash based on startTime and hqw3w
-            polygon_area=myArea,        
+            polygon_area=myArea_separated,       
+            polygon_area_approx="about " + str(round(myArea_rounded_approx)/1000000) + " square kilometers",       
             hq_w3w=res_hq['words'],     # w3w address of Polygon is based on HQ w3w address 
             hq_w1=config.game['round']['hqw3w'].split('.')[0],
             hq_w2=config.game['round']['hqw3w'].split('.')[1],
