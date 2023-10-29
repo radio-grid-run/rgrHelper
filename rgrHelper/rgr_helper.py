@@ -247,7 +247,7 @@ def computeterritory(config, savesortedinput, input, team):
         myArea_rounded_approx =round(myArea,-2)
         # DEBUG
         if config.verbose:
-            print(myArea_rounded)
+            print(myArea_separated)
         
         poly_string = featurePolygon_template.render(
             polygon_coords=poly_coord_string.replace('(','').replace(')',''),  # array of Points coords

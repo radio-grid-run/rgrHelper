@@ -1,0 +1,139 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.715378, 47.472739]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 11:39",
+        "uuid": "adf63e85-8c0d-40f7-9178-a52f6551fb50",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "abreise.ohne.beheizt",
+            "word1": "abreise",
+            "word2": "ohne",
+            "word3": "beheizt",
+            "language": "de",
+            "map": "https://w3w.co/abreise.ohne.beheizt"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.734375, 47.476296]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 11:56",
+        "uuid": "978a7f6a-7d31-4134-80fe-02e9f2a55ef0",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zürich",
+            "words": "verlobt.ersetzt.wählen",
+            "word1": "verlobt",
+            "word2": "ersetzt",
+            "word3": "wählen",
+            "language": "de",
+            "map": "https://w3w.co/verlobt.ersetzt.w%C3%A4hlen"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.735333, 47.482145]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:09",
+        "uuid": "0089af0a-2cce-4cdf-88e7-a8809900694b",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zürich",
+            "words": "turmuhr.spätes.steht",
+            "word1": "turmuhr",
+            "word2": "spätes",
+            "word3": "steht",
+            "language": "de",
+            "map": "https://w3w.co/turmuhr.sp%C3%A4tes.steht"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.725635, 47.483735]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:23",
+        "uuid": "bcdc3750-8ee0-437d-a0f0-b4abc32203d5",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Stadt Winterthur, Zürich",
+            "words": "vorab.bändern.tänzerin",
+            "word1": "vorab",
+            "word2": "bändern",
+            "word3": "tänzerin",
+            "language": "de",
+            "map": "https://w3w.co/vorab.b%C3%A4ndern.t%C3%A4nzerin"
+        }
+    }
+},{
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [ [8.715378, 47.472739], [8.734375, 47.476296], [8.735333, 47.482145], [8.725635, 47.483735], [8.715378, 47.472739]]
+          ]
+        },
+    "properties": {
+        "type": "territory",
+        "uuid": "4cabebff-72c8-467b-a08e-dac385bc408b",
+        "roundID": "5120e91e",
+        "area": "965,893",
+        "areaApprox": "about 0.9659 square kilometers",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Mike",
+            "id": "Mike"
+        }
+    }
+}
+    ],
+    "properties": {
+        "type": "round",
+        "time": "28-10-11:00:00",
+        "uuid": "f8c572d2-c70c-4a69-97ca-095653f24cc9",
+        "roundID": "5120e91e",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Mike",
+            "id": "Mike"
+        }   
+    }
+}

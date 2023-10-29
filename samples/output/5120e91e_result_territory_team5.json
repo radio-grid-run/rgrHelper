@@ -1,0 +1,97 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.726832, 47.477213]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:43",
+        "uuid": "4922d68e-1167-4e98-b18d-5b167ff90582",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "spells.bike.nurse",
+            "word1": "spells",
+            "word2": "bike",
+            "word3": "nurse",
+            "language": "en",
+            "map": "https://w3w.co/spells.bike.nurse"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.743674, 47.475892]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:45",
+        "uuid": "3dcff11e-0057-438f-abc5-09b216599283",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Seen, Zürich",
+            "words": "spoiler.swinging.dearest",
+            "word1": "spoiler",
+            "word2": "swinging",
+            "word3": "dearest",
+            "language": "en",
+            "map": "https://w3w.co/spoiler.swinging.dearest"
+        }
+    }
+},{
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [ [8.726832, 47.477213], [8.743674, 47.475892], [8.726832, 47.477213]]
+          ]
+        },
+    "properties": {
+        "type": "territory",
+        "uuid": "381592e0-3091-4e6a-965c-4c64fc3cefed",
+        "roundID": "5120e91e",
+        "area": "0",
+        "areaApprox": "about 0.0 square kilometers",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Zulu",
+            "id": "Zulu"
+        }
+    }
+}
+    ],
+    "properties": {
+        "type": "round",
+        "time": "28-10-11:00:00",
+        "uuid": "7776ded7-0ef4-41ff-a952-bc7c8c72054d",
+        "roundID": "5120e91e",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Zulu",
+            "id": "Zulu"
+        }   
+    }
+}

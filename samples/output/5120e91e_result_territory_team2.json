@@ -1,0 +1,97 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.735293, 47.481741]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:08",
+        "uuid": "9fb75dbc-c309-48aa-8ff5-cf3e5a38ad45",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zurich",
+            "words": "espèce.infrason.neutre",
+            "word1": "espèce",
+            "word2": "infrason",
+            "word3": "neutre",
+            "language": "fr",
+            "map": "https://w3w.co/esp%C3%A8ce.infrason.neutre"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.730544, 47.482414]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:17",
+        "uuid": "edb4d756-5f9f-4dc8-a46b-cb3e1b7401e4",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zurich",
+            "words": "donnons.hauban.sirop",
+            "word1": "donnons",
+            "word2": "hauban",
+            "word3": "sirop",
+            "language": "fr",
+            "map": "https://w3w.co/donnons.hauban.sirop"
+        }
+    }
+},{
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [ [8.735293, 47.481741], [8.730544, 47.482414], [8.735293, 47.481741]]
+          ]
+        },
+    "properties": {
+        "type": "territory",
+        "uuid": "08b92f65-dd16-4e61-b2e0-d4ec0c6b0933",
+        "roundID": "5120e91e",
+        "area": "0",
+        "areaApprox": "about 0.0 square kilometers",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Golf",
+            "id": "Golf"
+        }
+    }
+}
+    ],
+    "properties": {
+        "type": "round",
+        "time": "28-10-11:00:00",
+        "uuid": "c7d2e648-d3af-46a0-bcac-31859012ec95",
+        "roundID": "5120e91e",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Golf",
+            "id": "Golf"
+        }   
+    }
+}

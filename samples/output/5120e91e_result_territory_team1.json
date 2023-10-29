@@ -1,0 +1,139 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.740801, 47.475757]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 11:29",
+        "uuid": "c4c9a9cf-60ce-437b-b8fc-5e014e1b44f9",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Seen, Zürich",
+            "words": "heilung.entlehnte.dorfplatz",
+            "word1": "heilung",
+            "word2": "entlehnte",
+            "word3": "dorfplatz",
+            "language": "de",
+            "map": "https://w3w.co/heilung.entlehnte.dorfplatz"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.738007, 47.477886]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 11:47",
+        "uuid": "7810f72c-9faf-4d39-9532-a5b297d9c669",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zürich",
+            "words": "eher.helles.immer",
+            "word1": "eher",
+            "word2": "helles",
+            "word3": "immer",
+            "language": "de",
+            "map": "https://w3w.co/eher.helles.immer"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.735093, 47.480797]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 11:59",
+        "uuid": "74e41eff-6da8-4705-ad94-dd4547d143fc",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zürich",
+            "words": "leine.klingen.schlaf",
+            "word1": "leine",
+            "word2": "klingen",
+            "word3": "schlaf",
+            "language": "de",
+            "map": "https://w3w.co/leine.klingen.schlaf"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.728468, 47.478452]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:14",
+        "uuid": "ceef5ec5-959b-4234-a3e1-611515371fc7",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "logisch.ernten.käufer",
+            "word1": "logisch",
+            "word2": "ernten",
+            "word3": "käufer",
+            "language": "de",
+            "map": "https://w3w.co/logisch.ernten.k%C3%A4ufer"
+        }
+    }
+},{
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [ [8.740801, 47.475757], [8.738007, 47.477886], [8.735093, 47.480797], [8.728468, 47.478452], [8.740801, 47.475757]]
+          ]
+        },
+    "properties": {
+        "type": "territory",
+        "uuid": "532c7c6c-f1f2-4f79-a491-da95fed0104d",
+        "roundID": "5120e91e",
+        "area": "187,801",
+        "areaApprox": "about 0.1878 square kilometers",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Delta",
+            "id": "Delta"
+        }
+    }
+}
+    ],
+    "properties": {
+        "type": "round",
+        "time": "28-10-11:00:00",
+        "uuid": "6668729a-387b-4577-839c-7c9910cf7571",
+        "roundID": "5120e91e",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Delta",
+            "id": "Delta"
+        }   
+    }
+}

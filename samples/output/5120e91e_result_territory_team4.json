@@ -1,0 +1,97 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.735492, 47.482872]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:40",
+        "uuid": "fff59c20-729d-4c6b-b430-b59ecc6384a9",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zürich",
+            "words": "ausleger.maus.zwiebel",
+            "word1": "ausleger",
+            "word2": "maus",
+            "word3": "zwiebel",
+            "language": "de",
+            "map": "https://w3w.co/ausleger.maus.zwiebel"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.724318, 47.477347]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:41",
+        "uuid": "8d8672f0-d348-4938-834e-36c80e1502ca",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "geschützt.bleistift.entkommt",
+            "word1": "geschützt",
+            "word2": "bleistift",
+            "word3": "entkommt",
+            "language": "de",
+            "map": "https://w3w.co/gesch%C3%BCtzt.bleistift.entkommt"
+        }
+    }
+},{
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [ [8.735492, 47.482872], [8.724318, 47.477347], [8.735492, 47.482872]]
+          ]
+        },
+    "properties": {
+        "type": "territory",
+        "uuid": "5d197de6-d062-41cd-b5a7-f6fe29e10023",
+        "roundID": "5120e91e",
+        "area": "0",
+        "areaApprox": "about 0.0 square kilometers",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Yankee",
+            "id": "Yankee"
+        }
+    }
+}
+    ],
+    "properties": {
+        "type": "round",
+        "time": "28-10-11:00:00",
+        "uuid": "f1bf0479-8714-44bf-98ae-63b7f13ae371",
+        "roundID": "5120e91e",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Yankee",
+            "id": "Yankee"
+        }   
+    }
+}
