@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "rgrHelper"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
