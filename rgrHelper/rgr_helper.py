@@ -44,6 +44,38 @@ J2env = Environment(
     lstrip_blocks=True,
 )
 
+def sorting_input(config, inputFile, saveBoolean):
+        ## Reading input data
+        indata = csv.DictReader(
+            inputFile, delimiter=',', quotechar='"', skipinitialspace=True)
+        
+        ## Sorting input data
+        # sort criterias:
+        #       1. team ID
+        #       2. timestamp of the contact 
+        sortedInputData = sorted(indata, key=lambda row: (
+            row['team_id'], row['contact_time']))
+        
+        filename = config.roundhash.hexdigest() + '_' + config.game['output']['filename_inputData_sorted']
+
+        # check whether sorted csv is allready present
+        current_directory = os.getcwd()
+        fullFilePath = os.path.join(current_directory, filename)
+
+
+        ## IF Option --saveSortedInput
+        # writing sorted input data to *.csv file
+        # 
+        if not os.path.exists(fullFilePath) or saveBoolean :
+            print('I am doing it')
+            with open(fullFilePath, 'w', encoding='utf8') as sorted_data_copy:
+                meaningfulFields = ["team_id", "word1", "word2","word3","Notes","Added Time"]
+                sorted_data_writer = csv.DictWriter(sorted_data_copy, fieldnames=meaningfulFields, extrasaction='ignore')
+                sorted_data_writer.writeheader()
+                for row_sorted in sortedInputData:
+                    sorted_data_writer.writerow(row_sorted)
+        return sortedInputData
+
 
 @click.group()
 @click.option('--verbose', '-v', is_flag=True,
@@ -103,11 +135,11 @@ def testarea(config):
 
 
 @cli.command()
-@click.option('--savesortedinput', default=True, help='Save useful column of input data to a .CSV file sorted by team and time.')
+@click.option('--forcesortinput', default=False, help='Force re-creating the .CSV file with input sorted by team and time. If not, the file is only created once.')
 @click.argument('input', type=click.Path(exists=True, file_okay=True))
 @click.argument('team')
 @pass_config
-def computeterritory(config, savesortedinput, input, team):
+def computeterritory(config, forcesortinput, input, team):
     """Generate a geoJSON Feature Collections .json output file with all Points and the related Polygon.
 
     INPUT  Relativ path to csv input file.
@@ -139,170 +171,170 @@ def computeterritory(config, savesortedinput, input, team):
 
     ## Opening input csv input file
     with open(input, newline='', encoding='utf-8-sig') as inputFile:
-        ## Reading input data
-        indata = csv.DictReader(
-            inputFile, delimiter=',', quotechar='"', skipinitialspace=True)
+        sortedInputData = sorting_input(config,inputFile, forcesortinput)
         
-        ## Sorting input data
-        # sort criterias:
-        #       1. team ID
-        #       2. timestamp of the contact 
-        sortedInData = sorted(indata, key=lambda row: (
-            row['team_id'], row['contact_time']))
-        
-        ## IF Option --saveSortedInput
-        # writing sorted input data to *.csv file
-        # 
-        if savesortedinput:
-            with open(config.roundhash.hexdigest() + '_' + config.game['output']['filename_inputData_sorted'], 'w', encoding='utf8') as sorted_data_copy:
-                myfieldnames = ["team_id", "word1", "word2","word3","Notes","Added Time"]
-                # sorted_data_writer = csv.DictWriter(sorted_data_copy, fieldnames=config.default['CSV_conventions']['useful_column'], extrasaction='ignore')
-                sorted_data_writer = csv.DictWriter(sorted_data_copy, fieldnames=myfieldnames, extrasaction='ignore')
-                sorted_data_writer.writeheader()
-                for row_sorted in sortedInData:
-                    sorted_data_writer.writerow(row_sorted)
                     
         ## Computing contacts from selected team 
         #   geoJSON FeaturesCollection representing a game round.
         #   Each contact as a geoJSON Point Feature.
         #   Finally, a geoJSON Polygon made of Points is add with it's
         #   area computed and documented as a Feature property.
-        for row in sortedInData:
+        for row in sortedInputData:
             if row['team_id'] == team:
                 contact_count = contact_count+1
-                ## resolving what3words address through w3w API
-                # among those are the square coordinate 
-                res = geocoder.convert_to_coordinates(
-                    row['word1'] + "." + row['word2'] + "." + row['word3'])
-                # creating Point feature with geojson
-                onePoint = "{\"type\": \"Feature\",\"geometry\":" + str(
-                    geojson.Point((res['coordinates']['lng'], res['coordinates']['lat']))) + "}"
-                
-                # DEBUG
-                if config.verbose:
-                    print(onePoint)
-                
-                ## computation of geoJSON Point
-                #   Feature based on Jinja2 template
-                point_template = J2env.get_template(
-                    config.default['template']['template_point_contact_filename']
-                )
-                point_data = point_template.render(
-                    point_coord='[' + str(
-                        res['coordinates']['lng']) + ', ' + str(res['coordinates']['lat']) + ']',
-                    contact_time=row['contact_time'],
-                    # uuid is random
-                    feature_uuid=uuid.uuid4(),
-                    contact_country=res['country'],
-                    contact_nrstPlace=res['nearestPlace'],
-                    contact_w3w=res['words'],
-                    contact_w1=res['words'].split('.')[0],
-                    contact_w2=res['words'].split('.')[1],
-                    contact_w3=res['words'].split('.')[2],
-                    contact_lng=res['language'],
-                    contact_map=res['map']
-                )
-                ## insert Point Feature into string of Features
-                #  to be inserted into FeatureCollection
-                features_string += point_data + ','
 
-                ## Point coordinate inserted into array for the Polygon Feature
-                #  has to be inserted as a tuple
-                poly_coord.append(
-                    tuple((res['coordinates']['lng'], res['coordinates']['lat'])))
+                try:
+                    ## resolving what3words address through w3w API
+                    # among those are the square coordinate 
+                    res = geocoder.convert_to_coordinates(
+                        row['word1'] + "." + row['word2'] + "." + row['word3'])
 
-    ## If the selected team has at least recorded one contact,
-    #   computes the area and generates a geoJSON Feature collection
-    #   expoted as a JSON file
-    #  If a team has 1 or 2 contacts, the Polygon will not be valid
-    #   and the area will be 0. 
-    if contact_count > 0:
-       
-        ## resolving what3words address of game HQ through w3w API
-        # Game Headquarter what3word is recorded in gameConfig.ini
-        res_hq = geocoder.convert_to_coordinates(
-            config.game['round']['hqw3w'])
-        print(res_hq)
+                    # Check if 'error' key is present in the response data
+                    if 'error' in res:
+                        raise ValueError('Error: ' + res['error']['message'])
+                    
+                    else:
+                            # creating Point feature with geojson
+                            onePoint = "{\"type\": \"Feature\",\"geometry\":" + str(
+                                geojson.Point((res['coordinates']['lng'], res['coordinates']['lat']))) + "}"
+                            
+                            # DEBUG
+                            if config.verbose:
+                                print(onePoint)
+                            
+                            ## computation of geoJSON Point
+                            #   Feature based on Jinja2 template
+                            point_template = J2env.get_template(
+                                config.default['template']['template_point_contact_filename']
+                            )
+                            point_data = point_template.render(
+                                point_coord='[' + str(
+                                    res['coordinates']['lng']) + ', ' + str(res['coordinates']['lat']) + ']',
+                                contact_time=row['contact_time'],
+                                # uuid is random
+                                feature_uuid=uuid.uuid4(),
+                                contact_country=res['country'],
+                                contact_nrstPlace=res['nearestPlace'],
+                                contact_w3w=res['words'],
+                                contact_w1=res['words'].split('.')[0],
+                                contact_w2=res['words'].split('.')[1],
+                                contact_w3=res['words'].split('.')[2],
+                                contact_lng=res['language'],
+                                contact_map=res['map']
+                            )
+                            ## insert Point Feature into string of Features
+                            #  to be inserted into FeatureCollection
+                            features_string += point_data + ','
 
-        ## computation of geoJSON Polygon
-        #   Feature made of the contact Points based on Jinja2 template
-        featurePolygon_template = J2env.get_template(
-            config.default['template']['template_polygon_filename']
-        )
+                            ## Point coordinate inserted into array for the Polygon Feature
+                            #  has to be inserted as a tuple
+                            poly_coord.append(
+                                tuple((res['coordinates']['lng'], res['coordinates']['lat'])))
+                except ValueError as ve:
+                    print(ve)
 
-        ## first and last point of the Polygone have to be the same to close it
-        poly_coord.append(poly_coord[0])
+                ## If the selected team has at least recorded one contact,
+                #   computes the area and generates a geoJSON Feature collection
+                #   expoted as a JSON file
+                #  If a team has 1 or 2 contacts, the Polygon will not be valid
+                #   and the area will be 0. 
+                if contact_count > 0:
+
+                    try:
+
+                        ## resolving what3words address of game HQ through w3w API
+                        # Game Headquarter what3word is recorded in gameConfig.ini
+                        res_hq = geocoder.convert_to_coordinates(
+                            config.game['round']['hqw3w'])
+                        # Check if 'error' key is present in the response data
+                        if 'error' in res_hq:
+                            raise ValueError('Error: ' + res_hq['error']['message'])
+                        
+                        else:    
+                            ## computation of geoJSON Polygon
+                            #   Feature made of the contact Points based on Jinja2 template
+                            featurePolygon_template = J2env.get_template(
+                                config.default['template']['template_polygon_filename']
+                            )
+
+                            ## first and last point of the Polygone have to be the same to close it
+                            poly_coord.append(poly_coord[0])
+                            
+                            #replace '(' by '[' and replace ')' by ']' to get a valid geoJSON Polygon
+                            poly_coord_string = '['
+                            for oneCoord in poly_coord:
+                                poly_coord_string = poly_coord_string + ' ['+ str(oneCoord) +'],'
+                            poly_coord_string = poly_coord_string[0:-1] + ']'
+                            
+                            # Convert Coordinates to Polygon to get area
+                            teamPoly = geojson.Polygon([poly_coord])
+                            # computing Polygon aera in sqare kilometers
+                            myArea = round(area(teamPoly))
+                            myArea_separated = f"{myArea:,}"
+                            myArea_rounded_approx =round(myArea,-2)
+                            # DEBUG
+                            if config.verbose:
+                                print(myArea_separated)
+                            
+                            poly_string = featurePolygon_template.render(
+                                polygon_coords=poly_coord_string.replace('(','').replace(')',''),  # array of Points coords
+                                feature_uuid=uuid.uuid4(),  # random generated UUID
+                                round_identifier=config.roundhash.hexdigest(),   # round hash based on startTime and hqw3w
+                                polygon_area=myArea_separated,       
+                                polygon_area_approx="about " + str(round(myArea_rounded_approx)/1000000) + " square kilometers",       
+                                hq_w3w=res_hq['words'],     # w3w address of Polygon is based on HQ w3w address 
+                                hq_w1=config.game['round']['hqw3w'].split('.')[0],
+                                hq_w2=config.game['round']['hqw3w'].split('.')[1],
+                                hq_w3=config.game['round']['hqw3w'].split('.')[2],
+                                hq_nrstPlace=res_hq['nearestPlace'],    # w3w properties of square address
+                                hq_country=res_hq['country'],           # w3w properties of square address
+                                hq_lng=res_hq['language'],              # w3w properties of square address
+                                hq_map=res_hq['map'],                    # w3w properties of square address,            
+                                # team -> click argument value, ['name'] -> config key 
+                                team_name=config.game[str(team)]['name'],
+                                # team -> click argument value, ['id'] -> config key 
+                                team_ID=config.game[str(team)]['id']
+                            )
+                            ## adding geoJSON Polygon Feature to the Points Features 
+                            features_string += poly_string
+
+                            featureCollection_template = J2env.get_template(
+                                config.default['template']['template_featureColl_filename']
+                            )
+                            ## computation of geoJSON FeatureCollection
+                            #   Feature based on Jinja2 template.
+                            #   Represents the team's results territory 
+
+                            featureColl_data = featureCollection_template.render(
+                                features=features_string,           # Points and Polygon geoJSON Feature
+                                start_time=config.game['round']['startTime'],
+                                feature_uuid=uuid.uuid4(),          # random generated UUID
+                                round_identifier=config.roundhash.hexdigest(),   # round hash based on startTime and hqw3w
+                                hq_country=res_hq['country'],
+                                hq_nrstPlace=res_hq['nearestPlace'],
+                                hq_w3w=res_hq['words'],             # w3w address of Polygon is based on HQ w3w address
+                                hq_w1=config.game['round']['hqw3w'].split('.')[0],
+                                hq_w2=config.game['round']['hqw3w'].split('.')[1],
+                                hq_w3=config.game['round']['hqw3w'].split('.')[2],
+                                hq_lng=res_hq['language'],
+                                hq_map=res_hq['map'],
+                                # team -> click argument value, ['name'] -> config key 
+                                team_name=config.game[str(team)]['name'],
+                                # team -> click argument value, ['id'] -> config key 
+                                team_ID=config.game[str(team)]['id']
+                            )
+                            # writing output to file
+                            with open(config.roundhash.hexdigest() + '_' + config.game['output']['filename_teamTerritory_description']+'_team'+team+'.json', 'w', encoding='utf8') as out_file:
+                                out_file.write(featureColl_data)
+                            out_file.close()
+                    except ValueError as ve:
+                        print(ve)
+
+
+        if contact_count == 0:
+            print('Sorry, there are no contact recorded for team ' + team + '.')
         
-        #replace '(' by '[' and replace ')' by ']' to get a valid geoJSON Polygon
-        poly_coord_string = '['
-        for oneCoord in poly_coord:
-            poly_coord_string = poly_coord_string + ' ['+ str(oneCoord) +'],'
-        poly_coord_string = poly_coord_string[0:-1] + ']'
-        
-        # Convert Coordinates to Polygon to get area
-        teamPoly = geojson.Polygon([poly_coord])
-        # computing Polygon aera in sqare kilometers
-        myArea = round(area(teamPoly))
-        myArea_separated = f"{myArea:,}"
-        myArea_rounded_approx =round(myArea,-2)
-        # DEBUG
-        if config.verbose:
-            print(myArea_separated)
-        
-        poly_string = featurePolygon_template.render(
-            polygon_coords=poly_coord_string.replace('(','').replace(')',''),  # array of Points coords
-            feature_uuid=uuid.uuid4(),  # random generated UUID
-            round_identifier=config.roundhash.hexdigest(),   # round hash based on startTime and hqw3w
-            polygon_area=myArea_separated,       
-            polygon_area_approx="about " + str(round(myArea_rounded_approx)/1000000) + " square kilometers",       
-            hq_w3w=res_hq['words'],     # w3w address of Polygon is based on HQ w3w address 
-            hq_w1=config.game['round']['hqw3w'].split('.')[0],
-            hq_w2=config.game['round']['hqw3w'].split('.')[1],
-            hq_w3=config.game['round']['hqw3w'].split('.')[2],
-            hq_nrstPlace=res_hq['nearestPlace'],    # w3w properties of square address
-            hq_country=res_hq['country'],           # w3w properties of square address
-            hq_lng=res_hq['language'],              # w3w properties of square address
-            hq_map=res_hq['map'],                    # w3w properties of square address,            
-            # team -> click argument value, ['name'] -> config key 
-            team_name=config.game[str(team)]['name'],
-            # team -> click argument value, ['id'] -> config key 
-            team_ID=config.game[str(team)]['id']
-        )
-        ## adding geoJSON Polygon Feature to the Points Features 
-        features_string += poly_string
-
-        featureCollection_template = J2env.get_template(
-            config.default['template']['template_featureColl_filename']
-        )
-        ## computation of geoJSON FeatureCollection
-        #   Feature based on Jinja2 template.
-        #   Represents the team's results territory 
-
-        featureColl_data = featureCollection_template.render(
-            features=features_string,           # Points and Polygon geoJSON Feature
-            start_time=config.game['round']['startTime'],
-            feature_uuid=uuid.uuid4(),          # random generated UUID
-            round_identifier=config.roundhash.hexdigest(),   # round hash based on startTime and hqw3w
-            hq_country=res_hq['country'],
-            hq_nrstPlace=res_hq['nearestPlace'],
-            hq_w3w=res_hq['words'],             # w3w address of Polygon is based on HQ w3w address
-            hq_w1=config.game['round']['hqw3w'].split('.')[0],
-            hq_w2=config.game['round']['hqw3w'].split('.')[1],
-            hq_w3=config.game['round']['hqw3w'].split('.')[2],
-            hq_lng=res_hq['language'],
-            hq_map=res_hq['map'],
-            # team -> click argument value, ['name'] -> config key 
-            team_name=config.game[str(team)]['name'],
-            # team -> click argument value, ['id'] -> config key 
-            team_ID=config.game[str(team)]['id']
-        )
-        # writing output to file
-        with open(config.roundhash.hexdigest() + '_' + config.game['output']['filename_teamTerritory_description']+'_team'+team+'.json', 'w', encoding='utf8') as out_file:
-            out_file.write(featureColl_data)
-        out_file.close()
-    else:
-        print('Sorry, there are no contact recorded for team ' + team + '.')
-
+          
 @cli.command()
 @pass_config
 def hqpoint(config):
@@ -318,39 +350,51 @@ def hqpoint(config):
     # among those are the square coordinate 
     res_hq = geocoder.convert_to_coordinates(
         config.game['round']['hqw3w'])
-    # creating Point feature with geojson
-    feature_hq_point = "{\"type\": \"Feature\",\"geometry\":" + str(
-        geojson.Point((res_hq['coordinates']['lng'], res_hq['coordinates']['lat']))) + "}"
-    
-    # DEBUG
-    if config.verbose:
-        print(feature_hq_point)
-    
-    ## computation of geoJSON Point
-    #   Feature based on Jinja2 template
-    point_template = J2env.get_template(
-        config.default['template']['template_point_hq_filename']
-    )
-    hq_data = point_template.render(
-           feature_point=feature_hq_point[0:-1],           # Points goeJSON Feature of headquarter
-            round_time=config.game['round']['startTime'],
-            feature_uuid=uuid.uuid4(),          # random generated UUID
-            round_identifier=config.roundhash.hexdigest(),   # round hash based on startTime and hqw3w
-            hq_country=res_hq['country'],
-            hq_nrstPlace=res_hq['nearestPlace'],
-            hq_w3w=res_hq['words'],             # w3w address of Polygon is based on HQ w3w address
-            hq_w1=config.game['round']['hqw3w'].split('.')[0],
-            hq_w2=config.game['round']['hqw3w'].split('.')[1],
-            hq_w3=config.game['round']['hqw3w'].split('.')[2],
-            hq_lng=res_hq['language'],
-            hq_map=res_hq['map']
-    )
 
-    # print(config.roundhash.hexdigest())
-    # writing output to file
-    with open(config.roundhash.hexdigest() + '_' + config.game['output']['filename_roundHQ_description'], 'w', encoding='utf8') as out_file:
-        out_file.write(hq_data)
-    out_file.close()
+    try:
+        # Check if 'error' key is present in the response data
+        if 'error' in res_hq:
+            raise ValueError('Error: ' + res_hq['error']['message'])
+        
+        else:
+            # creating Point feature with geojson
+            feature_hq_point = "{\"type\": \"Feature\",\"geometry\":" + str(
+                geojson.Point((res_hq['coordinates']['lng'], res_hq['coordinates']['lat']))) + "}"
+            
+            # DEBUG
+            if config.verbose:
+                print(feature_hq_point)
+            
+            ## computation of geoJSON Point
+            #   Feature based on Jinja2 template
+            point_template = J2env.get_template(
+                config.default['template']['template_point_hq_filename']
+            )
+            hq_data = point_template.render(
+                feature_point=feature_hq_point[0:-1],           # Points goeJSON Feature of headquarter
+                    round_time=config.game['round']['startTime'],
+                    feature_uuid=uuid.uuid4(),          # random generated UUID
+                    round_identifier=config.roundhash.hexdigest(),   # round hash based on startTime and hqw3w
+                    hq_country=res_hq['country'],
+                    hq_nrstPlace=res_hq['nearestPlace'],
+                    hq_w3w=res_hq['words'],             # w3w address of Polygon is based on HQ w3w address
+                    hq_w1=config.game['round']['hqw3w'].split('.')[0],
+                    hq_w2=config.game['round']['hqw3w'].split('.')[1],
+                    hq_w3=config.game['round']['hqw3w'].split('.')[2],
+                    hq_lng=res_hq['language'],
+                    hq_map=res_hq['map']
+            )
+
+            # print(config.roundhash.hexdigest())
+            # writing output to file
+            with open(config.roundhash.hexdigest() + '_' + config.game['output']['filename_roundHQ_description'], 'w', encoding='utf8') as out_file:
+                out_file.write(hq_data)
+            out_file.close()
+        
+    except ValueError as ve:
+        print(ve)
+
+    return None
 
 if __name__ == '__main__':
     cli()

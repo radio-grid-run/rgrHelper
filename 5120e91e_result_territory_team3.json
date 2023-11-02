@@ -1,0 +1,349 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.740801, 47.475757]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 11:29",
+        "uuid": "4630b84d-af3b-46ba-ad71-a77b3457e43e",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Seen, Zürich",
+            "words": "heilung.entlehnte.dorfplatz",
+            "word1": "heilung",
+            "word2": "entlehnte",
+            "word3": "dorfplatz",
+            "language": "de",
+            "map": "https://w3w.co/heilung.entlehnte.dorfplatz"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.738007, 47.477886]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 11:47",
+        "uuid": "e2d60fcc-9296-4387-82fa-42b2064ab564",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zürich",
+            "words": "eher.helles.immer",
+            "word1": "eher",
+            "word2": "helles",
+            "word3": "immer",
+            "language": "de",
+            "map": "https://w3w.co/eher.helles.immer"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.735093, 47.480797]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 11:59",
+        "uuid": "c4f18e58-b8b9-40f8-bc5b-e521f6ffe53a",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zürich",
+            "words": "leine.klingen.schlaf",
+            "word1": "leine",
+            "word2": "klingen",
+            "word3": "schlaf",
+            "language": "de",
+            "map": "https://w3w.co/leine.klingen.schlaf"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.728468, 47.478452]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:14",
+        "uuid": "fe45eb11-a8d5-4cff-94e7-4421fb014aff",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "logisch.ernten.käufer",
+            "word1": "logisch",
+            "word2": "ernten",
+            "word3": "käufer",
+            "language": "de",
+            "map": "https://w3w.co/logisch.ernten.k%C3%A4ufer"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.735293, 47.481741]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:08",
+        "uuid": "2fc727f4-2a94-4f31-83fb-113394477177",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zurich",
+            "words": "espèce.infrason.neutre",
+            "word1": "espèce",
+            "word2": "infrason",
+            "word3": "neutre",
+            "language": "fr",
+            "map": "https://w3w.co/esp%C3%A8ce.infrason.neutre"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.730544, 47.482414]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:17",
+        "uuid": "38e33bfe-579d-43bc-95b7-2146dc9bea16",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zurich",
+            "words": "donnons.hauban.sirop",
+            "word1": "donnons",
+            "word2": "hauban",
+            "word3": "sirop",
+            "language": "fr",
+            "map": "https://w3w.co/donnons.hauban.sirop"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.715378, 47.472739]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 11:39",
+        "uuid": "885e905f-c218-4961-bf66-4d542ac73e97",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "abreise.ohne.beheizt",
+            "word1": "abreise",
+            "word2": "ohne",
+            "word3": "beheizt",
+            "language": "de",
+            "map": "https://w3w.co/abreise.ohne.beheizt"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.734375, 47.476296]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 11:56",
+        "uuid": "fd25f245-c686-4dd7-9cee-056db0cd4e91",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zürich",
+            "words": "verlobt.ersetzt.wählen",
+            "word1": "verlobt",
+            "word2": "ersetzt",
+            "word3": "wählen",
+            "language": "de",
+            "map": "https://w3w.co/verlobt.ersetzt.w%C3%A4hlen"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.735333, 47.482145]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:09",
+        "uuid": "be55041e-6cec-447e-a61a-57518985bbad",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zürich",
+            "words": "turmuhr.spätes.steht",
+            "word1": "turmuhr",
+            "word2": "spätes",
+            "word3": "steht",
+            "language": "de",
+            "map": "https://w3w.co/turmuhr.sp%C3%A4tes.steht"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.725635, 47.483735]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:23",
+        "uuid": "d4b6ac22-6c2e-4e06-a7f4-b2ec4d08460f",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Stadt Winterthur, Zürich",
+            "words": "vorab.bändern.tänzerin",
+            "word1": "vorab",
+            "word2": "bändern",
+            "word3": "tänzerin",
+            "language": "de",
+            "map": "https://w3w.co/vorab.b%C3%A4ndern.t%C3%A4nzerin"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.735492, 47.482872]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:40",
+        "uuid": "2e3d0fc0-a3d5-48b1-8ede-7df11c74f667",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zürich",
+            "words": "ausleger.maus.zwiebel",
+            "word1": "ausleger",
+            "word2": "maus",
+            "word3": "zwiebel",
+            "language": "de",
+            "map": "https://w3w.co/ausleger.maus.zwiebel"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.724318, 47.477347]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:41",
+        "uuid": "10d07740-0112-4b4a-b3fb-518095767709",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "geschützt.bleistift.entkommt",
+            "word1": "geschützt",
+            "word2": "bleistift",
+            "word3": "entkommt",
+            "language": "de",
+            "map": "https://w3w.co/gesch%C3%BCtzt.bleistift.entkommt"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.726832, 47.477213]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:43",
+        "uuid": "10a0cfe0-1f7e-4fef-a5c9-f15bc13d6708",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "spells.bike.nurse",
+            "word1": "spells",
+            "word2": "bike",
+            "word3": "nurse",
+            "language": "en",
+            "map": "https://w3w.co/spells.bike.nurse"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.743674, 47.475892]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:45",
+        "uuid": "ec143875-589b-4bd4-bfda-f296c20ce526",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Seen, Zürich",
+            "words": "spoiler.swinging.dearest",
+            "word1": "spoiler",
+            "word2": "swinging",
+            "word3": "dearest",
+            "language": "en",
+            "map": "https://w3w.co/spoiler.swinging.dearest"
+        }
+    }
+},{
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [ [8.740801, 47.475757], [8.738007, 47.477886], [8.735093, 47.480797], [8.728468, 47.478452], [8.735293, 47.481741], [8.730544, 47.482414], [8.715378, 47.472739], [8.734375, 47.476296], [8.735333, 47.482145], [8.725635, 47.483735], [8.735492, 47.482872], [8.724318, 47.477347], [8.726832, 47.477213], [8.743674, 47.475892], [8.740801, 47.475757]]
+          ]
+        },
+    "properties": {
+        "type": "territory",
+        "uuid": "c4aa46ad-f2fc-45fe-adc2-d8aafa4b1f86",
+        "roundID": "5120e91e",
+        "area": "955,964",
+        "areaApprox": "about 0.956 square kilometers",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Mike",
+            "id": "Mike"
+        }
+    }
+}
+    ],
+    "properties": {
+        "type": "round",
+        "time": "28-10-11:00:00",
+        "uuid": "332843c3-3498-40db-9122-acdff166b5e4",
+        "roundID": "5120e91e",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Mike",
+            "id": "Mike"
+        }   
+    }
+}

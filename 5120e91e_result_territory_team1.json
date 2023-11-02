@@ -1,0 +1,126 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.735093, 47.480797]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 11:59",
+        "uuid": "5eae5c50-ae02-4f35-b917-ed5bc3c9ef5f",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Mattenbach, Zürich",
+            "words": "leine.klingen.schlaf",
+            "word1": "leine",
+            "word2": "klingen",
+            "word3": "schlaf",
+            "language": "de",
+            "map": "https://w3w.co/leine.klingen.schlaf"
+        }
+    }
+},{
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [ [8.735093, 47.480797], [8.735093, 47.480797]]
+          ]
+        },
+    "properties": {
+        "type": "territory",
+        "uuid": "4250348d-1012-4c0e-9906-791f3bf27740",
+        "roundID": "5120e91e",
+        "area": "0",
+        "areaApprox": "about 0.0 square kilometers",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Delta",
+            "id": "Delta"
+        }
+    }
+}{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.743674, 47.475892]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:45",
+        "uuid": "472fd625-c6d8-4850-8fd3-6ae6311512fd",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Seen, Zürich",
+            "words": "spoiler.swinging.dearest",
+            "word1": "spoiler",
+            "word2": "swinging",
+            "word3": "dearest",
+            "language": "en",
+            "map": "https://w3w.co/spoiler.swinging.dearest"
+        }
+    }
+},{
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [ [8.735093, 47.480797], [8.735093, 47.480797], [8.743674, 47.475892], [8.735093, 47.480797]]
+          ]
+        },
+    "properties": {
+        "type": "territory",
+        "uuid": "9be65ce6-fb9e-4203-9ba1-e9f8994a78e2",
+        "roundID": "5120e91e",
+        "area": "0",
+        "areaApprox": "about 0.0 square kilometers",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Delta",
+            "id": "Delta"
+        }
+    }
+}
+    ],
+    "properties": {
+        "type": "round",
+        "time": "28-10-11:00:00",
+        "uuid": "2347a8cc-76ce-4bab-9b80-5872cc3d98d0",
+        "roundID": "5120e91e",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Delta",
+            "id": "Delta"
+        }   
+    }
+}

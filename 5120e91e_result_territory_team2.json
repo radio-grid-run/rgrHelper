@@ -1,0 +1,76 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [8.726832, 47.477213]
+        },
+    "properties": {
+        "type": "contact",
+        "time": "28-Oct-2023 12:43",
+        "uuid": "e77ff59f-769d-4987-809a-f9e45403640f",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "spells.bike.nurse",
+            "word1": "spells",
+            "word2": "bike",
+            "word3": "nurse",
+            "language": "en",
+            "map": "https://w3w.co/spells.bike.nurse"
+        }
+    }
+},{
+        "type": "Feature",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [ [8.726832, 47.477213], [8.726832, 47.477213]]
+          ]
+        },
+    "properties": {
+        "type": "territory",
+        "uuid": "f58de672-5dfe-407c-ba2b-e2e536118814",
+        "roundID": "5120e91e",
+        "area": "0",
+        "areaApprox": "about 0.0 square kilometers",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Golf",
+            "id": "Golf"
+        }
+    }
+}
+    ],
+    "properties": {
+        "type": "round",
+        "time": "28-10-11:00:00",
+        "uuid": "7ae2b372-882f-439e-b34d-59bdf3e2b8b5",
+        "roundID": "5120e91e",
+        "w3wAddress": {
+            "country": "CH",
+            "nearestPlace": "Töss, Zürich",
+            "words": "hingabe.abmachung.pflegten",
+            "word1": "hingabe",
+            "word2": "abmachung",
+            "word3": "pflegten",
+            "language": "de",
+            "map": "https://w3w.co/hingabe.abmachung.pflegten"
+        },
+        "team": {
+            "name": "Equipe_Golf",
+            "id": "Golf"
+        }   
+    }
+}
